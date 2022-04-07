@@ -1,0 +1,156 @@
+.contact__container {
+  background: var(--color-bg1);
+  padding: 64px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 64px;
+  height: 480px;
+  margin: 116px auto;
+  border-radius: 16px;
+}
+
+/*========================ASIDE========================*/
+.contact__aside {
+  background: var(--color-primary);
+  padding: 48px;
+  border-radius: 16px;
+  position: relative;
+  bottom: 160px;
+}
+
+.aside__image {
+  width: 192px;
+  margin-bottom: 16px;
+}
+
+.contact__aside h2 {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.contact__aside p {
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.contact__details li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.contact__socials {
+  display: flex;
+  gap: 13px;
+  margin-top: 48px;
+}
+
+.contact__socials a {
+  background: var(--color-bg1);
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.contact__socials a:hover {
+  background: transparent;
+}
+
+/*========================FORM========================*/
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  margin-left: 64px;
+}
+
+.form__fullName {
+  display: flex;
+  gap: 19px;
+}
+
+.contact__form input[type="text"] {
+  width: 50%;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 16px;
+  background: var(--color-bg);
+  color: var(--color-white);
+}
+
+.contact__form .btn {
+  width: max-content;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+/* =====================MEDIA QUERIES(TABLET)==================== */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  .contact {
+    padding-bottom: 0;
+  }
+
+  .contact__container {
+    grid-template-columns: 1fr;
+    height: auto;
+    margin-top: 48px;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .contact__aside {
+    bottom: 0;
+    width: auto;
+    padding: 24px;
+  }
+
+  .contact__form {
+    align-self: center;
+    margin-right: 24px;
+  }
+
+  .aside__image {
+    width: 80%;
+    margin-bottom: 24px;
+  }
+}
+
+/* =====================MEDIA QUERIES(PHONE)==================== */
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .contact__form {
+    margin: 0 24px 48px;
+  }
+
+  .form__fullName {
+    flex-direction: column;
+  }
+
+  .contact__form input[type="text"] {
+    width: 100%;
+  }
+
+  .aside__image {
+    width: 80%;
+    margin-bottom: 32px;
+  }
+}
